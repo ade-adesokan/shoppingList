@@ -1,0 +1,222 @@
+/**********************************
+           CSS RESET CODE
+***********************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/**********************************
+           MAIN CSS CODE
+***********************************/
+
+
+html, body  {
+	max-width: 100%;
+	max-height: 100%;
+	background: -webkit-linear-gradient(top right, rgba(0,0,0,0.5),white);
+	font-family: sans-serif;
+}
+
+/*Shopping list heading*/
+
+h1 {
+	font-size: 2em;
+	margin: 1em auto;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*Section of app*/
+section {
+	margin: 0 auto;
+	width: 80%;
+	padding: 1em;
+	text-align: center;
+}
+
+/*individual parts i.e add box, added items and checked out items*/
+.parts {
+	border-bottom: 2px solid rgba(0,0,0,0.2);
+	padding: 2em;
+}
+
+/*First part*/
+
+#new-item{
+	width: 50%;
+	display: inline-block;
+}
+
+/*Default styling of text boxes*/
+input[type= "text"]{
+	border-radius: 3px;
+	height: 2em;
+	padding: 0.3em;
+	border: none;
+	font-size: 1em;
+	display: none;
+}
+
+
+/*second part*/
+
+/*headings and label styles*/
+
+h2,
+label[for='new-item'] {
+	font-size: 1.5em;
+	padding-bottom: 1em;
+	display: block;
+}
+
+/*Style for list items including third part list item*/
+li {
+	padding: 1em 0;
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/*General button styles*/
+button {
+	margin-left: 1em;
+	margin-right: 1em;
+	background: none;
+	border: 0px;
+	cursor: pointer;
+	color: green;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+/*button effects*/
+button:hover{
+	text-decoration: underline;
+}
+
+
+/*Edit mode styles*/
+
+.edit-mode input[type=text] {
+	border: 1px dotted black;
+	height: 1em;
+	width: 10em;
+	color: rgba(0,0,0,0.6);
+	display: inline-block;
+}
+
+.edit-mode label {
+	display: none;
+}
+
+
+/*Third part*/
+
+#checked-out-items label{
+	text-decoration: line-through;
+	color: green;
+}
+
+.edit{
+	color: blue;
+}
+.delete{
+	color: red;
+}
+
+
+
+/**********************************
+        RESPONSIVE CSS CODE
+***********************************/
+
+ @media screen and (max-width: 480px) {
+ 	
+ 	h1 {
+		font-size: 1.5em;
+	}
+ 	
+ 	section {
+		margin: 1em auto;
+		padding: 1em;
+	}
+
+	h2, label[for='new-item'] {
+		font-size: 1em;
+		padding-bottom: 1em;
+	}
+
+	input[type= "text"]{
+		border-radius: 3px;
+		height: 1em;
+		font-size: 0.765em;
+	}
+
+	li {
+		text-align: left;
+	}
+
+	.edit-mode input[type="text"] {
+		width: 5em;
+	}
+
+	.edit, .delete {
+		display: inline-block;
+		position: relative;
+		float: right;
+	}
+
+	label{
+		font-size: 0.75em;
+	}
+
+	button {
+		font-size: 0.7em;
+
+	}
+}
+
+ 

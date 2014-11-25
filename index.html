@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shopping List</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style/main.css"/>
+	</head>
+	<body>
+		<h1>Shopping List </h1>
+
+		<section>
+			
+			<div class ="parts">				
+				<label for="new-item">Add Items to Shopping List</label>
+				<input type ="text" id ="new-item">
+				<button>Add</button>				
+			</div>
+
+			<div class ="parts">
+				<h2>Added Items</h2>
+				<ul id ="added-items">
+					<li>
+						<input type = "checkbox">
+						<label>Bread</label>
+						<input type="text">						
+						<button class= "edit">Edit</button >
+						<button class= "delete">Delete</button>
+					</li>
+
+					<li class= "edit-mode">
+						<input type = "checkbox">
+						<label>Ketchup</label>
+						<input type="text" value= "Onions">
+						<button class= "edit">Edit</button >
+						<button class= "delete">Delete</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class ="parts">
+				<h2>Checked out Items</h2>
+				<ul id ="checked-out-items">
+					<li>
+						<input type = "checkbox" checked>
+						<label>Detergent</label>
+						<input type="text">		
+						<button class= "edit">Edit</button >
+						<button class= "delete">Delete</button>
+					</li>	
+					<li>
+						<input type = "checkbox" checked>
+						<label>Iron</label>
+						<input type="text">		
+						<button class= "edit">Edit</button >
+						<button class= "delete">Delete</button>
+					</li>					
+				</ul>
+			</div>
+		
+		</section>		
+
+
+		
+		<script type="text/javascript" src="script/app.js"></script>
+	</body>
+</html>
